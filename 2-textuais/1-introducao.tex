@@ -1,0 +1,65 @@
+\chapter{Introdução}
+\label{cap:introducao}
+
+%Para começar a usar este \textit{template}, na plataforma \textit{ShareLatex}, vá nas opções (três barras vermelhas horizontais) no canto esquerdo superior da tela e clique em "Copiar Projeto" e dê um novo nome para o projeto. 
+
+
+Os estudantes de engenharia devem receber um ensino que os capacite para o mercado de trabalho e para a indústria, que está em constante transformação. A utilização de atividades de laboratório, alinhadas com a realidade de mercado, favorece o crescimento e o preparo do acadêmico para a realidade profissional fora da universidade \cite{fadep2013}. 
+
+Porém, esse tipo de atividade demanda material adequado para que se possa alcançar os objetivos didático-pedagógicos planejados. No entanto, muitas vezes para a aquisição desses materiais, tais como placas e licenças de softwares, são necessários recursos financeiros com valores elevados, os quais por vezes não estão ao alcance de universidades públicas.
+
+A disciplina de TI0158 Sistemas Eletrônicos Digitais Reconfiguráveis (SEDR) do curso de engenharia de computação da UFC, busca, entre outras metas, capacitar o aluno para discutir problemas relacionados a eletrônica digital aplicada a sistemas digitais complexos, bem como fornecer as habilidades necessárias para que este projete sistemas digitais complexos (vide ANEXO A - Ementa de SEDR).
+
+Para isso, essa disciplina faz uso do ensino de FPGA, que é um tipo de circuito integrado (CI) que pode ser programado para diferentes algoritmos após a sua fabricação, proporcionando conhecimento em desenvolvimento e teste de aplicações para dispositivos lógicos reconfiguráveis. 
+
+Com a crescente demanda de processamento de dados gerados pelas inúmeras plataformas e tecnologias do mercado, a utilização de FPGAs se faz cada vez mais necessária para acelerar essas cargas de trabalho, por fornecerem alta capacidade computacional e consumo de energia consideravelmente menor do que outros hardwares de propósito especial, como as GPUs \cite{7859319}.
+
+A fim de tornar  acessível o uso de uma placa contendo uma FPGA \textit{high end}, e um ambiente pronto para o desenvolvimento de acelerações baseadas em FPGAs, a Amazon Web Services (AWS) passou a disponibilizar em dezembro de 2016 as instâncias de computação em nuvem Elastic Compute Cloud (EC2) F1. Essas instâncias são equipadas com FPGAs Virtex Xilinx UltraScale+ VU9P e contém softwares pré-implantados, como o Vivado e o Sdaccel, que são usados para o desenvolvimento e implementações de soluções personalizadas para aceleração de hardware. Essa abordagem diminui vertiginosamente o custo de um projeto desenvolvido para uma FPGA de alto desempenho como a disponível na AWS. Para se ter uma ideia, o custo de um sistema de desenvolvimento como este, considerando host, placa FPGA e licenças de software, ultrapassa o preço de um carro popular novo, enquanto que o serviço da Amazon custa da ordem de \$USD 1,50 por hora de uso. 
+
+
+\section{Motivação}\label{sec:motivacao}
+
+Como já foi exposto na seção anterior, o uso de FPGAs está cada vez mais sendo ampliado no mercado, por apresentarem elevada eficiência computacional aliada a uma excelente economia energética. Neste sentido, e em consonância com a necessidade de alinhar ensino e mercado de trabalho, é de suma importância que os alunos de engenharia de computação sejam capacitados para usar as mais mordernas e potentes FPGAs, preferencialmente a partir da nuvem, o que como já explicado, permite um baixo custo de desenvolvimento. 
+
+O ambiente de nuvem AWS fornece recursos essenciais, a um baixo custo, para capacitar os alunos, futuros engenheiros, na área de aceleração por hardware, que é uma solução para vários problemas moderno, tais como semineração de dados e inteligência artifical, ligados a temas modernos como internet das coisas e cidades inteligentes . Nesse sentido, esse recurso enriquece a ministração da disciplina TI0158, pois o uso desse serviço se mostra benéfico para o desenvolvimento dos projetos de FPGAs, por permitir, a um baixo custo, acessibilidade à tecnologia de ponta disponível no mercado. Um exemplo de um caso de sucesso do uso da AWS para o ensino dessa área, é que essa abordagem também está sendo usado pela \textit{University of California, Berkeley} na disciplina CS 152 \textit{Computer Architecture and Engineering}, que faz uso das instâncias EC2 F1 em práticas de laboratório \cite{berkeley}.
+
+
+Além de o custo ser bem razoável quando comparado à aquisição do material, o qual fica obsoleto em poucos anos, a Amazon ainda oferece um \textit{voucher} de USD\$ 100,00 para cada aluno da UFC, e também dispõe de recursos extras para projetos de pesquisa e ensino, submetidos a Amazon, e obviamente, aprovados por esta.
+ 
+ 
+\section{Objetivos}\label{sec:objetivo}
+
+\subsection{Objetivo geral}
+O objetivo deste trabalho foi realizar um estudo sobre a viabilidade de utilização do serviço EC2 F1 ofertado pela Amazon Web Services, como um recurso didático para a disciplina de Sistemas Eletrônicos Digitais Reconfiguráveis do curso de graduação em Engenharia da Computação do Departamento de Engenharia de Teleinformática na Universidade Federal do Ceará.
+
+\subsection{Objetivos específicos}
+ \begin{itemize}
+ \item Produzir material didático (\textbf{ver Apêndice Práticas de Laboratório}) para ensinar a usar as instâncias EC2 F1 
+ 
+ \item Aplicação e análise do formulário SEEQ para avaliar a qualidade do material didático desenvolvido.
+\end{itemize}
+
+
+Essa disciplina é um componente optativo do curso e é recomendada a ser cursada no sétimo semestre, para os alunos que pretendem seguir a área de Sistemas Embarcados ou Microeletrônica. O estudo foi realizado por meio da elaboração e aplicação de práticas de laboratório utilizando as FPGAs e os softwares de desenvolvimento disponíveis na instância EC2 F1 da AWS.
+
+
+\section{Estrutura do Trabalho}\label{sec:estrutura}
+ 
+A organização deste trabalho se dá em 5 capítulos. O Capítulo 2 apresenta uma revisão sobre os conceitos necessários para o entendimento do trabalho. Neste capítulo são abordadas as FPGAs e sua utilização no ambiente de nuvem AWS. O Capítulo 3 consiste da descrição da metodologia de desenvolvimento do projeto e todas as configurações necessárias para que o ambiente de desenvolvimento funcione como esperado. Além disso, este capítulo descreve cada prática em detalhes, no que diz respeito ao que se trata, aos objetivos de aprendizado e os procedimentos necessários para sua realização. No Capítulo 4 são apresentados os resultados obtidos a partir da aplicação das práticas de laboratórios e das respostas do questionário aplicado ao final de cada prática. Por fim, o o Capítulo 5 apresenta as considerações finais e as perspectivas futuras deste trabalho.
+
+
+
+%Testando o símbolo $\symE$
+
+%\lipsum[5]  % Simulador de texto, ou seja, é um gerador de lero-lero.
+
+%	\begin{alineas}
+%		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum sed tortor nec viverra.
+%		\item Praesent vitae nulla varius, pulvinar quam at, dapibus nisi. Aenean in commodo tellus. Mauris molestie est sed justo malesuada, quis feugiat tellus venenatis.
+%		\item Praesent quis erat eleifend, lacinia turpis in, tristique tellus. Nunc dictum sed tortor nec viverra.
+%		\item Mauris facilisis odio eu ornare tempor. Nunc dictum sed tortor nec viverra.
+%		\item Curabitur convallis odio at eros consequat pretium.
+%	\end{alineas}
+	
+
+	
