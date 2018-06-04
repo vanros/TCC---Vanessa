@@ -1,13 +1,14 @@
 \chapter{Fundamentação Teórica}
 \label{cap:fundamentacao-teorica}
-AQUI PRECISA DE UMA INTRODUÇÃO ... ALGO COMO ... NESTE CAPÍTULO, DISCUTIREMOS SOBRE ISSO E AQUILO OUTRO BLA BLA BLA
+Neste Capítulo serão apresentados  os conceitos necessários para um melhor entendimento do que foi realizado neste trabalho.
+
 \section{Field Programmable Gate Array (FPGA)}\label{sec:fpga}
 
-Uma FPGA é um tipo de circuito integrado (CI) que, após a sua fabricação, pode ser programado e reprogramado para implementar um circuito qualquer. Esse recurso é o que distingue as FPGAs dos ASICs (\textit{Application Specific Integrated Circuits}), que são projetados para realizar uma tarefa específica durante toda sua vida útil. Os primeiros modelos de FPGA (\textit{Field Programmable Gate Array}) foram introduzidos durante os anos 80, tendo a Xilinx apresentado as primeiras FPGAs em 1984, embora elas não fossem chamadas de FPGAs até que a Actel popularizou o termo por volta do ano 1988 \cite{7086413}. 
+Uma FPGA (\textit{Field Programmable Gate Array}) é um tipo de circuito integrado (CI) que, após a sua fabricação, pode ser programado e reprogramado para implementar um circuito qualquer. Esse recurso é o que distingue as FPGAs dos ASICs (\textit{Application Specific Integrated Circuits}), que são projetados para realizar uma tarefa específica durante toda sua vida útil. Os primeiros modelos de FPGA foram introduzidos durante os anos 80, tendo a Xilinx\footnote{A Xilinx é a maior empresa fornecedora de dispositivos lógicos programáveis, sendo a primeira inventora da FPGA e a primeira empresa de semicondutores a se especializar na fabricação de hardware.} apresentado as primeiras FPGAs em 1984, embora elas não fossem chamadas de FPGAs até que a Actel\footnote{A Actel é uma empresa americana fabricante de FPGAs e soluções lógicas programáveis.} popularizou o termo por volta do ano 1988 \cite{7086413}. 
 
-As FPGAs contêm uma matriz de blocos lógicos que são reprogramáveis, além de uma hierarquia de interconexões reconfiguráveis, permitindo a "conexão" entre os blocos. Os blocos lógicos podem ser configurados para executar funções combinacionais complexas, ou podem executar lógica simples como portas AND e XOR. Na maioria das FPGAs, os blocos lógicos também incluem elementos de memória, como flip-flops ou blocos mais complexos de memória.
+As FPGAs contêm uma matriz de blocos lógicos que são reprogramáveis, além de uma hierarquia de interconexões reconfiguráveis, permitindo a "conexão" entre os blocos. Os blocos lógicos podem ser configurados para executar funções combinacionais complexas, ou podem executar lógica simples como portas AND e XOR. Na maioria das FPGAs, os blocos lógicos também incluem elementos de memória, como \textit{flip-flops} ou blocos mais complexos de memória.
 
-As FPGAs oferecem vantagens de custo significativas em comparação ao esforço de desenvolvimento de um CI, sendo portanto uma ótima alternativa, quando processadores de uso gera ou específico se mostram ineficazes para atingir requisitos energéticos e de desempenho. Una outra vantagem das FPGAs quando comparado ao CI é sua capacidade de ser reconfigurado dinamicamente \cite{fpgaxilinx}.
+As FPGAs oferecem vantagens de custo significativas em comparação ao esforço de desenvolvimento de um CI \cite{8119247}, sendo portanto uma ótima alternativa, quando processadores de uso gera ou específico se mostram ineficazes para atingir requisitos energéticos e de desempenho. Uma outra vantagem das FPGAs quando comparado ao CI é sua capacidade de ser reconfigurado dinamicamente \cite{fpgaxilinx}.
 
 
 
@@ -28,13 +29,11 @@ A arquitetura de uma FPGA consiste em uma matriz genérica de blocos interconect
 A combinação desses elementos formam a arquitetura básica da FPGA, mostrada na Figura \ref{fig:fpga-architecture}.
 Quando executa uma instância, o tipo de instância que você especifica determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece uma memória de computação diferente e os recursos de armazenamento são agrupados em famílias de instâncias de acordo com esses recursos
 
-
-
 \begin{figure}[h!] 
-   	    \captionsetup{width=16cm}%Da mesma largura que a figura
+   	    \captionsetup{width=12cm}%Da mesma largura que a figura
 		\Caption{\label{fig:fpga-architecture} Arquitetura básica de uma FPGA}
 		\UFCfig{}{
-			\includegraphics[width=16cm]{figuras/fpga-architecture.jpeg}
+			\includegraphics[width=12cm]{figuras/fpga-architecture.jpeg}
 		}{
 			\Fonte{\cite{fpgaxilinx}.}
 		}	
@@ -57,7 +56,11 @@ A combinação desses elementos fornece a FPGA a flexibilidade de implementar qu
 \subsection{A FPGA Virtex Xilinx UltraScale+ VU9P} \label{sec:virtex}
  
  A Xilinx possui famílias de FPGAs, que são fabricadas em nós tecnológicos diversos, sendo as FPGAs \textit{high end} atualmente fabricadas no nó tecnológico de 16nm. A Tabela \ref{Tab:familias} mostra as famílias de acordo com os nós tecnológicos nos quais cada família é fabricada.
- 
+
+ Note que, conforme exemplificado acima com a Xilinx ultrascale+ fabricadas em 16nm, as FPGAs \textit{high end} são fabricadas em nós tecnológicos de dimensões menores, permitindo assim a integração de mais circuitos e unidades lógicas. De uma maneira geral, a FPGA  Virtex Xilinx UltraScale+ VU9P contém 1.182 LUTs, 2.364 flip-flops, 345.9 Mb de memória e 832 de I/O \cite{ultrascale}.
+
+ A informação do custo de uma FPGA como esta não é fácil de se obter, é necessário entrar em contato com a \textit{Xilinx} e atender a pré-requisitos estabelecidos pela empresa para a informação ser oferecida. Porém, em discussões em fóruns e comunidades de desenvolvedores de aplicações para FPGA, estima-se que o custo é de entre $US$ 30,000 e $US$ 50,000. Contudo, é possível acessar aos recursos desta FPGA como um serviço, por meio da computação em nuvem, no ambiente de nuvem Amazon Web Services (AWS). Os conceitos de computação em nuvem e da AWS são discutidos a seguir.
+
  \begin{table}[!htb]
     \centering
     \caption{Famílias Xilinx de acordo com a tecnologia utilizada}
@@ -79,18 +82,14 @@ A combinação desses elementos fornece a FPGA a flexibilidade de implementar qu
    
 \end{table}
 
- Note que, conforme exemplificado acima com a xilinx ultrascale+ fabricadas em 16nm, as FPGAs \textit{high end} são fabricadas em nós tecnológicos de dimensões menores, permitindo assim a integração de mais circuitos e unidades lógicas.  
- 
- 
-
 
 \section{Computação em Nuvem}
 
 Atualmente, os serviços básicos e essenciais como, água, eletricidade, telefone e gás, são entregues de uma forma transparente e são explorados por meio do modelo de pagamento baseado no uso. A mesma ideia tem sido utilizada com os serviços de informática. Neste sentido, plataformas e softwares estão sendo disponibilizados como serviços, por meio de um ambiente de Computação em Nuvem, melhorando a flexibilidade, reduzindo o custo do total do negócio e provendo serviços sob demanda.
 
 
-A definição de Computação em Nuvem ou \textit{Cloud Computing} fornecida pelo National Institute of Standards and
-Technology (NIST) diz que a Computação em Nuvem é um modelo para permitir acesso de rede conveniente e sob demanda a um conjunto compartilhado de recursos de computação configuráveis (por exemplo, redes, servidores, aplicações de armazenamento  e serviços) que podem ser rapidamente provisionados e liberados com esforço mínimo de gerenciamento ou interação com o provedor de serviços \cite{6203873}. Basicamente, a computação em nuvem move a computação e os dados para longe dos desktop e PCs portáteis convencionais para um grande \textit{data center}. Seu principal objetivo é fazer um melhor uso dos recursos distribuídos, combinando-os a fim de alcançar um maior rendimento, além de ser capaz de resolver a computação em grande escala.
+A definição de Computação em Nuvem, ou \textit{Cloud Computing}, fornecida pelo National Institute of Standards and
+Technology (NIST) diz que a Computação em Nuvem é um modelo para permitir acesso de rede conveniente e sob demanda a um conjunto compartilhado de recursos de computação configuráveis por exemplo, redes, servidores, aplicações de armazenamento  e serviços que podem ser rapidamente provisionados e liberados com esforço mínimo de gerenciamento ou interação com o provedor de serviços \cite{6203873}. Basicamente, a computação em nuvem move a computação e os dados para longe dos desktop e PCs portáteis convencionais para um grande \textit{data center}. Seu principal objetivo é fazer um melhor uso dos recursos distribuídos, combinando-os a fim de alcançar um maior rendimento, além de ser capaz de resolver a computação em grande escala.
 
 
 A computação em nuvem apresenta cinco principais características, que são as seguintes:
@@ -107,7 +106,6 @@ A computação em nuvem apresenta cinco principais características, que são as
 
 \end{itemize}
 
-BEM, SÓ PRA NAO ESQUECERMOS, NA DISCUSSAO/CONCLUSAO FACA UMA ANALISE DO SERVICO EC2 F1 EM VISTA AO ATENDIMENTO AOS PILARES ACIMA DESCRITOS.
 
 A crescente adoção da utilização de recursos provisionados pela nuvem por parte de pequenas e grandes empresas, se deve aos diversos benefícios que a computação em nuvem tem oferecido, como fácil gerenciamento, início rápido, escalabilidade, transparência de custos, baixo custo de manutenção, potencial para maior segurança, potencial para maior confiabilidade, etc. \cite{5942089}
 
@@ -115,7 +113,7 @@ Atualmente, empresas como a Amazon Web Services, Microsoft Azure, Google Cloud P
 
 \subsection{Amazon Web Services (AWS)}
 
-A Amazon web Services (AWS) é uma plataforma de computação formada por uma coleção de serviços de infra-estrutura, como poder de processamento, opções de armazenamento, redeQuando executa uma instância, o tipo de instância que você especifica determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece uma memória de computação diferente e os recursos de armazenamento são agrupados em famílias de instâncias de acordo com esses recursos e banco de dados que são entregues como um utilitário: sob demanda, disponíveis em segundos, com preços pré-pagos \cite{awsOverview}.
+A Amazon Web Services (AWS) é uma plataforma de computação formada por uma coleção de serviços de infra-estrutura, como poder de processamento, opções de armazenamento, redeQuando executa uma instância, o tipo de instância que você especifica determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece uma memória de computação diferente e os recursos de armazenamento são agrupados em famílias de instâncias de acordo com esses recursos e banco de dados que são entregues como um utilitário: sob demanda, disponíveis em segundos, com preços pré-pagos \cite{awsOverview}.
 
 Esses serviços operam a partir de 16 regiões geográficas pelo mundo, os mais centrais e conhecidos desses serviços são Amazon Simple Storage Service (S3), Amazon Elastic Compute Cloud (EC2) e Amazon Relational Database Service (RDS), estes dois primeiros foram utilizados neste estudo, e por isso, serão descritos a seguir.
 
@@ -131,14 +129,13 @@ Esses serviços operam a partir de 16 regiões geográficas pelo mundo, os mais 
     \item Informações seguras de login para as instâncias usando pares de chave (a AWS armazena a chave pública e o consumidor armazena a chave privada em um lugar seguro).
     \item Volumes de armazenamento para dados temporários que são excluídos quando uma instância é interrompida ou encerrada, conhecidos como volumes de armazenamento de instâncias.
     \item Volumes de armazenamento persistentes para os dados usando o Amazon Elastic Block Store (Amazon EBS), conhecidos como volumes do Amazon EBS.
- \end{itemize}
+\end{itemize}
  
- 
+
 Quando uma instância é executada, o tipo de instância especificada determina o hardware do computador host usado para a instância. Cada tipo de instância oferece uma memória de computação diferente e os recursos de armazenamento são agrupados em famílias de instâncias de acordo com esses recursos \cite{awsInstances}. O Amazon EC2 fornece os tipos de instâncias listados na Tabela \ref{Tab:Instancias}.
 
-
-
-\begin{table}[!htb]
+ 
+\begin{table}[H]
     \centering
     \caption{Tipos de instâncias do Amazon EC2}
     \label{Tab:Instancias}
@@ -155,15 +152,16 @@ Quando uma instância é executada, o tipo de instância especificada determina 
 \end{table}
 
 
+
 \end{itemize}
 
 \section{O Serviço Amazon EC2 F1  de Processamento remoto  em   FPGAs na nuvem}\label{sec:servicos amazon}
 
     Com a grande quantidade de tecnologias e plataformas que estão sendo apresentadas no mercado, os centros de dados dessas aplicações cada vez mais precisam enfrentar o desafio de acelerar cargas de trabalho com tipos de dados complexos, que exigem um poder de processamento que ultrapassa a capacidade de CPUs tradicionais.
     
-    As GPUs são amplamente usadas para o processamento de aplicações de análise de dados e de aprendizagem de máquinas. As FPGAs (Field Programmable Gate Array) tem sido vistas como uma melhor solução, proporcionando maior desempenho por watt em vários cenários \cite{8119247}, em particular naqueles que fazem uso de aritmética de ponto fixo e não realizam operações de ponto flutuantes. No entanto, a adoção de FPGAs para aceleração de aplicações ainda é limitada devido a dificuldade de implementação tanto de um acelerador eficiente baseado em FPGA,  quanto da infra-estrutura que realiza a comunicação entre o acelerador e a aplicação que fornece e/ou recebe dados da FPGA. 
+    As GPUs são amplamente usadas para o processamento de aplicações de análise de dados e de aprendizagem de máquinas. As FPGAs tem sido vistas como uma melhor solução, proporcionando maior desempenho por watt em vários cenários \cite{8119247}, em particular naqueles que fazem uso de aritmética de ponto fixo e não realizam operações de ponto flutuantes. No entanto, a adoção de FPGAs para aceleração de aplicações ainda é limitada devido a dificuldade de implementação tanto de um acelerador eficiente baseado em FPGA,  quanto da infra-estrutura que realiza a comunicação entre o acelerador e a aplicação que fornece e/ou recebe dados da FPGA. 
     
-    A fim de facilitar essa comunicação e oferecer um ambiente pronto para o desenvolvimento de acelerações baseadas em FPGAs, a Amazon Web Services (AWS) lançou no ano de 2016 as instâncias de computação em nuvem Elastic Compute Cloud (EC2) F1, que são equipadas com FPGAs Xilinx. Essas instâncias permitem uma maior rapidez no desenvolvimento das aplicações por disponibilizarem todos os itens necessários para desenvolver, simular, depurar e compilar código de aceleração de hardware \citeonline{aws2016f1}.
+    A fim de facilitar essa comunicação e oferecer um ambiente pronto para o desenvolvimento de acelerações baseadas em FPGAs, a AWS lançou no ano de 2016 as instâncias de computação em nuvem Elastic Compute Cloud (EC2) F1, que são equipadas com FPGAs Xilinx. Essas instâncias permitem uma maior rapidez no desenvolvimento das aplicações por disponibilizarem todos os itens necessários para desenvolver, simular, depurar e compilar código de aceleração de hardware \cite{aws2016f1}.
     
     
     
@@ -174,7 +172,7 @@ Quando uma instância é executada, o tipo de instância especificada determina 
   
 \subsection{Arquitetura da instância F1} \label{sec:arq}
     
-    A implantação do design da aplicação para a FPGA é feita nas instâncias EC2 F1, que são oferecidas em dois tamanhos diferentes e disponibilizam FPGAs Xilinx UltraScale+ VU9P fabricadas em tecnologia de 16 nm. É possível iniciar múltiplas instâncias com 1 ou 8 FPGAs conectadas. Cada placa inclui 64 GiB de memória protegida DDR4 ECC com uma conexão PCIe x16 dedicada.  Cada FPGA contém aproximadamente 2,5 milhões de elementos de lógica e 6.800 mecanismos de processamento de sinais digitais (DSP) \citeonline{aws2016f1}. % verificar essa citação do site
+    A implantação do design da aplicação para a FPGA é feita nas instâncias EC2 F1, que são oferecidas em dois tamanhos diferentes e disponibilizam FPGAs Xilinx UltraScale+ VU9P fabricadas em tecnologia de 16 nm. É possível iniciar múltiplas instâncias com 1 ou 8 FPGAs conectadas. Cada placa inclui 64 GiB de memória protegida DDR4 ECC com uma conexão PCIe x16 dedicada.  Cada FPGA contém aproximadamente 2,5 milhões de elementos de lógica e 6.800 mecanismos de processamento de sinais digitais (DSP) \cite{aws2016f1}. % verificar essa citação do site
     
     As especificações mais detalhadas de cada tipo de instâncias F1 são mostradas na Tabela \ref{Tab:F1}. 
         
@@ -184,23 +182,25 @@ Quando uma instância é executada, o tipo de instância especificada determina 
     \label{Tab:F1}
     \begin{tabular}{lccccccc}
     \hline
-    \multicolumn{1}{l}{Tipo de Instância}&\multicolumn{1}{l}{FPGAs }&\multicolumn{1}{l}{DDR-4(Gib)}&\multicolumn{1}{l}{vCPUs}&\multicolumn{1}{l}{Memória (GiB)}&\multicolumn{1}{l}{Armazenamento NVMe (GB)}&\multicolumn{1}{l}{Rede Largura de Banda} \\ \midrule 
+    \multicolumn{1}{l}{Tipo de Instância}&\multicolumn{1}{l}{FPGAs }&\multicolumn{1}{l}{DDR-4(Gib)}&\multicolumn{1}{l}{vCPUs}&\multicolumn{1}{l}{Memória (GiB)}&\multicolumn{1}{l}{Arm. NVMe (GB)}&\multicolumn{1}{l}{Largura de Banda} \\ \midrule 
     
     f1.2xlarge & 1 & 4 x 16 & 8 & 122 & 1 x 470 & Até 10 Gbps\\   \midrule
-    f1.16xlarge & 8 & 32 x 16 & 64 & 976 & 4 x 940 & 25  Gbps
+    f1.16xlarge & 8 & 32 x 16 & 64 & 976 & 4 x 940 & 25  Gbps\\   \midrule
 
     \end{tabular}
     \end{table}
     
 
 
-A aceleração baseada em FPGA na AWS é uma estratégia de coprocessador, a FPGA é ligada aos pós-processadores via PCI Express (PCIe), essa conexão PCIe também permite a comunicação entre as FPGAs da instância f1.16xlarge. Assim, uma típica aplicação para a instância f1 inclui um software executando nos processadores host comunicando dados e instruções, através de uma interface PCIe, para a FPGA, que contém a aplicação que foi desenvolvida e carregada na FPGA. A Figura \ref{fig:f1-architecture} detalha esse processo de comunicação.
+A aceleração baseada em FPGA na AWS é uma estratégia de coprocessamento, a FPGA é ligada aos pós-processadores via PCI Express (PCIe), essa conexão PCIe também permite a comunicação entre as FPGAs da instância f1.16xlarge. Assim, uma típica aplicação para a instância f1 inclui um software executando nos processadores host comunicando dados e instruções, através de uma interface PCIe, para a FPGA, que contém a aplicação que foi desenvolvida e carregada na FPGA. A Figura \ref{fig:f1-architecture} detalha esse processo de comunicação.
 
+
+   
 \begin{figure}[h!] 
-   	    \captionsetup{width=16cm}%Da mesma largura que a figura
+   	    \captionsetup{width=12cm}%Da mesma largura que a figura
 		\Caption{\label{fig:f1-architecture} Como uma aceleração de FPGA funciona na AWS}
 		\UFCfig{}{
-			\includegraphics[width=16cm]{figuras/f1-architecture.jpg}
+			\includegraphics[width=12cm]{figuras/f1-architecture.jpg}
 		}{
 			\Fonte{\cite{aws2016f1}.}
 		}	
@@ -212,11 +212,11 @@ A aceleração baseada em FPGA na AWS é uma estratégia de coprocessador, a FPG
 Para desenvolver as aplicações FPGAs é necessário seguir um fluxo de programação proposto pela AWS. Esse fluxo é descrito pelos seguintes passos:
 
 \begin{enumerate}
-    \item Desenvolver a \textbf{Lógica Customizada (Custom Logic - CL)} para a FPGA utilizando as ferramentas de desenvolvimento da Xilinx, disponíveis na \textbf{FPGA Deveploper AMI}, combinadas com o \textbf{Kit de desenvolvimento - HDK }.
+    \item Desenvolver a \textbf{Lógica Customizada (\textit{Custom Logic - CL)}} para a FPGA utilizando as ferramentas de desenvolvimento da Xilinx, disponíveis na \textbf{\textit{FPGA Deveploper AMI}}, combinadas com o \textbf{Kit de desenvolvimento - HDK }.
     
-    \item Combinar a CL com uma lógica fornecida pela AWS chamada de \textbf{FPGA Shell}.
+    \item Combinar a CL com uma lógica fornecida pela AWS chamada de \textbf{FPGA \textit{Shell}}.
     
-    \item Criar uma \textbf{Amazon FPGA Image (AFI)} a partir da CL construída.
+    \item Criar uma \textbf{\textit{Amazon FPGA Image (AFI)}} a partir da CL construída.
     
     \item Carregar a AFI gerada em uma FPGA conectada à instância F1 ou disponilizar no AWS Marketplace.
 \end{enumerate}
@@ -225,28 +225,28 @@ Os recursos ofertados pela AWS citados na descrição do fluxo de desenvolviment
 
 \subsubsection{ FPGA Developer AMI} \label{sec:ami}
 
-Para permitir um desenvolvimento rápido de acelerações de hardware, a AWS disponibiliza uma AMI para desenvolvedores de FPGA, a FPGA Developer AMI, que é um ambiente de desenvolvimento pré-definido, com scripts e ferramentas para o desenvolvimento, compilação e simulação do design FPGA, pronto para ser executado em uma instância EC2. Por se tratar de uma ambiente de desenvolvimento, a FPGA Developer AMI normalmente não é executada em uma instância F1, mas em outros tipos de instâncias EC2, em uma instância que não contém uma FPGA. A AMI pode ser implantada em uma variedade de tipos e tamanhos de instâncias EC2, como por exemplo a M4 que é para propósitos gerais, a R4 que é otimizada para memória, a C4 que é otimizada para computação, ou a T2, que tem um baixo custo. esta última deve ser usada apenas para o design e simulação, não sendo indicada para a síntese ou PAR (place-and-route).
+Para permitir um desenvolvimento rápido de acelerações de hardware, a AWS disponibiliza uma AMI para desenvolvedores de FPGA, a \textit{FPGA Developer AMI}, que é um ambiente de desenvolvimento pré-definido, com scripts e ferramentas para o desenvolvimento, compilação e simulação do design FPGA, pronto para ser executado em uma instância EC2. Por se tratar de uma ambiente de desenvolvimento, \textit{FPGA Developer AMI} normalmente não é executada em uma instância F1, mas em outros tipos de instâncias EC2, em uma instância que não contém uma FPGA. A AMI pode ser implantada em uma variedade de tipos e tamanhos de instâncias EC2, como por exemplo a M4 que é para propósitos gerais, a R4 que é otimizada para memória, a C4 que é otimizada para computação, ou a T2, que tem um baixo custo. esta última deve ser usada apenas para o design e simulação, não sendo indicada para a síntese ou PAR (\textit{place-and-route}).
 
-A FPGA Developer AMI está disponível no AWS Marketplace, onde não são aplicados custos para o uso da AMI e suas ferramentas, apenas são cobrados os custos por hora de execução da instância EC2 escolhida.
+\textit{FPGA Developer AMI} está disponível no AWS Marketplace, onde não são aplicados custos para o uso da AMI e suas ferramentas, apenas são cobrados os custos por hora de execução da instância EC2 escolhida.
 
 
 \subsubsection{Kit de desenvolvimento - HDK e SDK} \label{sec:hdk}
     
     A AWS disponibiliza o repositório AWS-FPGA na plataforma github, no endereço https://github.com/aws/aws-fpga, que contém os kits de desenvolvimento de hardware e software. Esses kits incluem duas partes: o HDK e o SDK.
     
-    O HDK é um diretório onde estão disponíveis todos os arquivos de design e scripts necessários para criar uma \textit{FPGA Amazon Image (AFI)} a partir de um projeto RTL(Verilog/VHDL), que é uma imagem que contém o bitstream pronto para ser implementado em uma FPGA. Para usá-lo, o desenvolvedor deve baixar o HDK instalá-lo em seu ambiente de desenvolvimento, na nuvem ou local.
+    O HDK é um diretório onde estão disponíveis todos os arquivos de design e scripts necessários para criar uma \textit{Amazon FPGA Image (AFI)} a partir de um projeto RTL(Verilog/VHDL), que é uma imagem que contém o bitstream pronto para ser implementado em uma FPGA. Para usá-lo, o desenvolvedor deve baixar o HDK instalá-lo em seu ambiente de desenvolvimento, na nuvem ou local.
     
     Nesse diretório estão inclusos todos os scripts de criação do ambiente de desenvolvimento, simulação, compilação e criação da AFI. A instalação do HDK pode ser feita em qualquer servidor local ou em uma instância EC2. O uso do HDK é necessário apenas se for preciso criar uma AFI e não utilizar uma AFI pré-construída.
     
-    O diretório SDK inclui todos os drives e o ambiente de execução exigidos em qualquer instãncia EC2 FPGA. Esses drives e ferramentas são usados para a interação com as AFI pré-construídas que serão carregadas nas FPGAs disponíveis nas instâncias EC2 F1.
+    O diretório SDK inclui todos os drives e o ambiente de execução exigidos em qualquer instância EC2 FPGA. Esses drives e ferramentas são usados para a interação com as AFI pré-construídas que serão carregadas nas FPGAs disponíveis nas instâncias EC2 F1.
     
-    Além disso, o SDK contém as ferramentas de gerenciamento da \textit{FPGA Amazon Image (AFI)}, que inclui tanto o código fonte para as ferramentas de gerenciamento da AFI, quanto as descrições detalhadas dos comandos a serem usados  uma instância F1.
+    Além disso, o SDK contém as ferramentas de gerenciamento da \textit{Amazon FPGA Image (AFI)}, que inclui tanto o código fonte para as ferramentas de gerenciamento da AFI, quanto as descrições detalhadas dos comandos a serem usados  uma instância F1.
     
 
      
 \subsubsection{Lógica Customizada (Custom Logic - CL)} \label{sec:cl}
 
-A Lógica Customizada ou \textit{Custom Logic - CL} é design completo desenvolvido para a FPGA. A combinação da CL com a AWS Shell tem como resultado um \textit{Design Checkpoint (DCP)} e não um bitstream, esse é gerado pela AWS depois que o desenvolvedor envia o DCP \cite{awsfaq}. 
+A Lógica Customizada, ou \textit{Custom Logic - CL}, é o design completo desenvolvido para a FPGA. A combinação da CL com a AWS Shell tem como resultado um \textit{Design Checkpoint (DCP)} e não um bitstream, esse é gerado pela AWS depois que o desenvolvedor envia o DCP \cite{awsfaq}. 
 
 Existe uma interface entre a CL e uma aplicação real em execução no espaço do usuário do linux durante o tempo de execução. Nessa interface há duas partes: \textit{Management} e \textit{Runtime}. A Figura \ref{fig:cl} mostra uma visão de alto nível desses componentes e como eles se relacionam com a FPGA.
 
@@ -286,13 +286,13 @@ Existe uma interface entre a CL e uma aplicação real em execução no espaço 
 
 \subsubsection{FPGA Shell} \label{sec:shell}
 
-O AWS Shell é a parte da FPGA que é fornecida e gerenciada pela AWS. É uma Lógica responsável por cuidar dos periféricos externos FPGA, PCIe, DRAM e Interrupções.Ele  implementa as tarefas não diferenciadas de desenvolvimento e de trabalho pesado, como configurar a interface PCIe, download de AWS FPGA Image, segurança, monitoramento de integridade, métricas e ganchos de depuração \cite{awsfaq}. Cada FPGA implantada na nuvem inclui um AWS Shell e as interfaces da \textit{custom logic} do desenvolvedor com as interfaces disponíveis do AWS Shell.
+O \textit{AWS Shell} é a parte da FPGA que é fornecida e gerenciada pela AWS. É uma Lógica responsável por cuidar dos periféricos externos FPGA, PCIe, DRAM e Interrupções.Ele  implementa as tarefas não diferenciadas de desenvolvimento e de trabalho pesado, como configurar a interface PCIe, download de AWS FPGA Image, segurança, monitoramento de integridade, métricas e ganchos de depuração \cite{awsfaq}. Cada FPGA implantada na nuvem inclui um AWS Shell e as interfaces da \textit{custom logic} do desenvolvedor com as interfaces disponíveis do AWS Shell.
 
-A Figura \ref{fig:shell} e a Tabela \ref{Tab:shell} resumem as várias interfaces entre o Shell e o CL.
+A Tabela \ref{Tab:shell} e a Figura \ref{fig:shell}  resumem as várias interfaces entre o Shell e o CL.
 
 
 
-\begin{figure}[htb!] 
+\begin{figure}[H] 
    	    \captionsetup{width=15cm}%Da mesma largura que a figura
 		\Caption{\label{fig:shell} Interfaces Shell}
 		\UFCfig{}{
@@ -304,7 +304,7 @@ A Figura \ref{fig:shell} e a Tabela \ref{Tab:shell} resumem as várias interface
 
 
       
-\begin{table}[!htb]
+\begin{table}[H]
     \centering
      \caption{Interfaces Shell}
     \label{Tab:shell}
@@ -319,7 +319,7 @@ A Figura \ref{fig:shell} e a Tabela \ref{Tab:shell} resumem as várias interface
     OCL                & \begin{tabular}[c]{@{}l@{}}A interface OCL é uma interface AXI-Lite associada ao AppPF e \\ ao BAR0\end{tabular}                      \\ \hline
     BAR1               & \begin{tabular}[c]{@{}l@{}}The BAR1 Interface is an AXI-Lite interface associated with AppPF\\  and BAR1\end{tabular}                 \\ \hline
     Interrupts         & Existem 16 interrupções de usuário disponíveis                                                                                        \\ \hline
-    Miscellaneous      & \begin{tabular}[c]{@{}l@{}}Existem vários sinais genéricos, como ID's, status, contadores, etc., entre o Shell\\  e o CL\end{tabular} \\ \hline
+    Miscellaneous      & \begin{tabular}[c]{@{}l@{}}Existem vários sinais genéricos, como ID's, status, contadores, etc.,\\ entre o Shell  e o CL\end{tabular} \\ \hline
     \end{tabular}
 \end{table}
 
@@ -341,7 +341,7 @@ Em relação a representação PCIe FPGA para instância do EC2, Existem duas fu
 
 \paragraph{Amazon FPGA Image (AFI)} \label{sec:afi}
  
- Uma Amazon Image é o código FPGA compilado que é carregado em um FPGA na AWS para executar a CL criada pelo desenvolvedor. As AFIs são mantidas pela AWS de acordo e associados à conta da AWS que os criou. O AFI inclui o CL e o AWS FPGA Shell \cite{awsfaq}.
+ Uma \textit{Amazon FPGA Image} é o código FPGA compilado que é carregado em um FPGA na AWS para executar a CL criada pelo desenvolvedor. As AFIs são mantidas pela AWS de acordo e associados à conta da AWS que os criou. O AFI inclui o CL e o \textit{AWS FPGA Shell} \cite{awsfaq}.
  
  Após a conclusão do design, é possível registrar uma Amazon FPGA Image (AFI), que é uma imagem de FPGA que será carregada na FPGA conectada à instância e poderá ser reusada muitas vezes e em quantas instâncias F1 for desejadas.  
 
@@ -357,7 +357,7 @@ Após o processo da criação de uma AFI são fornecidos as seguintes identifica
 
 \subsection{Tarifação} \label{sec:tarifacao}
 
-Os custos gerados ao desenvolver um aplicação para FPGA na AWS dizem respeito a quantidade de horas que as instâncias, usadas para o desenvolvimento e a instância F1, são executadas. Cada instância tem um custo por hora. As instâncias F1 apresenta os seguintes custos:
+Os custos gerados ao desenvolver um aplicação para FPGA na AWS dizem respeito a quantidade de horas que as instâncias, usadas para o desenvolvimento e a instância F1, são executadas. Cada instância tem um custo por hora. As instâncias F1 apresentam os seguintes custos:
 
 \begin{itemize}
     \item f1.2xlarge: USD\$1.65 por hora.

@@ -7,7 +7,7 @@
 %% vá nas opções no canto esquerdo superior da tela  %%
 %% e clique em "Copiar Projeto". Dê um novo nome pa- %%
 %% ra o projeto.                                     %%
-%%                                                   %%
+%%                 et                                   %%
 %% Os principais desenvolvedores deste template são: %%
 %%                                                   %%
 %%             Ednardo Moreira Rodrigues             %%
@@ -30,7 +30,7 @@
 %% Project available on:                             %%
 %% https://github.com/thiagodnf/uecetex2             %%
 %%                                                   %%
-%% "Dúvidas, esclarecimentos ou sugestões podem ser  %%
+%% "Dúvidas, escl etarecimentos ou sugestões podem ser  %%
 %% enviadas para o e-mail da Comissão de Serviços da %%
 %% Biblioteca Universitária: csbu@ufc.br."           %%
 %%                                                   %%
@@ -84,5 +84,19 @@
 
 % Gera o Indice do documento
 \makeindex
-
+\usepackage{fancyvrb}
 \setlength{\mathindent}{0pt} %Complementa o alinhamento de equações para totalmente a esquerda.
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[numbers]{natbib}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{aliascnt}
+\newaliascnt{eqfloat}{equation}
+\newfloat{eqfloat}{h}{eqflts}
+\floatname{eqfloat}{Equation}
+\usepackage{amsmath}

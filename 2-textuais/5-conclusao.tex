@@ -1,0 +1,27 @@
+\chapter{Considerações Finais}
+\label{chap:conclusoes-e-trabalhos-futuros}
+Este trabalho apresentou a experiência do serviço Amazon EC2 F1 como uma ferramenta para o ensino de FPGAs através de quatro práticas de laboratório. Além disso,  foram apresentados os recursos e vantagens relacionados a esse serviço, foram fornecidos detalhes sobre o procedimento para usar as instâncias de desenvolvimento e a F1, foi apresentado o conteúdo das quatro práticas de laboratório, além de terem sido discutidos os resultados da pesquisa sobre o uso do Amazon EC2 F1, facilitando a experiência de educadores que desejam utilizar esse serviço para o ensino de FPGAs.
+
+Os resultados indicam um aumento significativo do nível médio de habilidades no Amazon EC2, e mostram que, de uma maneira geral, os alunos se mostraram empolgados em aprender sobre o Amazon EC2 na disciplina, além de considerarem uma experiência útil para o desenvolvimento de suas carreiras. Porém, identificou-se um certo receio por parte dos alunos no uso das instâncias EC2 F1 em outras pesquisas ou trabalhos, o que leva a acreditar que os benefícios do uso do Amazon EC2 F1 variam de acordo com a natureza da pesquisa ou trabalho a ser realizado.
+
+Observamos também que a maioria dos alunos não são versados no uso do sistema operacional linux, o que dificulta bastante o aprendizado das instâncias EC2 F1. Ainda que o objetivo da disciplina de SEDR esteja longe de querer ensinar o uso do Linux, foi possível observar uma melhoria expressiva do conhecimento dos alunos nesse sentido.
+
+Com relação ao conteúdo abordado nas práticas, observou-se que uma parte da dificuldade do entendimento das práticas se deve a falta de conhecimento prévio de conceitos relacionados ao desenvolvimento de aplicações para FPGAs. Por exemplo, antes do início das práticas, a disciplina incluiu apenas uma explanação básica sobre barramentos AXI. Tendo em vista que a arquitetura imposta pela Xilinx para uso na EC2 F1 é essencialmente baseada nesse tipo de interface, recomenda-se a inclusão de um maior número de horas teóricas previamente à execução das práticas, detalhando os diversos tipos de barramentos AXI, a saber, AXI Stream, AXI Lite e AXI Full. Mais ainda, recomenda-se a inclusão de práticas com interface AXI utilizando a placa Basys 3 usada na disciplina. Da mesma forma, recomenda-se que as práticas anteriores às práticas da EC2 F1, sejam já executadas em ambiente linux, mas não em ambiente windows, e que incluam o uso de interface tcl em modo batch do Vivado, o que facilita bastante o aprendizado das instâncias EC2 F1.
+
+
+
+\section{Limitações e Trabalhos Futuros}\label{sec:limitacoes-e-trabalhos-futuros}
+Para ter acesso ao serviço EC2 F1 e receber o \textit{voucher} de USD\$ 100,00 , o aluno precisa fornecer um cartão de crédito, o que dificulta bastante a adesão dos alunos a este modelo. Neste sentido, recomenda-se a elaboração e subsmissão de projeto educacional a fim de receber créditos para que os alunos possam fazer as práticas sem nenhum custo, e sem precisar informar um número de cartão de crédito.
+
+Além disso, nas práticas 3 e 4, A simulação e verificação do sistema \textit{shell/custom logic} foi executado localmente nas máquinas do laboratório de hardware. Observou-se uma lentidão exagerada, o que causou travamentos e mesmo desestímulo nos alunos. Neste sentido, recomenda-se o uso de máquinas com recursos computacionais superiores, com pelo menos de 8GB de memória RAM. 
+
+Observou-se ainda que a internet da UFC não forneceu uma conexão adequada para permitir o uso com fluidez da interface gráfica do vivado, sendo executado remotamente nas instâncias da Amazon.
+
+Como trabalhos futuros, é sugerido a elaboração de práticas baseadas em ferramentas de desenvolvimento em alto nível, tal como SDAccell e Vivado HLS, o que permite o desenvolvimento rápido de sistemas mais complexos, permitindo ao aluno compreender melhor o verdadeiro potencial computacional das EC2 F1. Além de práticas que permitam o debug remoto do hardware usando a virtual JTAG.
+
+
+
+
+
+
+

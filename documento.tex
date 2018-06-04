@@ -126,7 +126,9 @@
 %%  Informacoes relacionadas ao trabalho     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\autor{Proposta de Uma solução de baixo custo com o uso das instâncias EC2 F1 da Amazon Web Services para o ensino de FPGAs no Curso de Engenharia de Computação da UFC}
+
+\autor{Vanessa Rodrigues Oliveira da Silva}
+\titulo{O uso das instâncias EC2 F1 da \textit{Amazon Web Services} para o ensino de FPGAs no Curso de Engenharia de Computação da UFC}
 \data{2018}
 \local{Fortaleza}
 
@@ -136,7 +138,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     Informação sobre o Orientador       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \orientador{Prof. Msc. Ricardo Jardel Nunes da Silveira}
 \orientadories{Universidade Federal do Ceará (UFC)}
 \orientadorcentro{Centro de Tecnologia (CT)}
@@ -148,9 +149,9 @@
 
 % Deixe o nome do coorientador em branco para remover do documento
 
-\coorientador{Prof. Msc. Marcelo Araújo Lima}
-\coorientadories{Instituto Federal do Ceará (IFCE)}
-\coorientadorcentro{Centro do Co-orientador (SIGLA)}
+\coorientador{Prof. Dr. Thomaz Edson Veloso da Silva}
+\coorientadories{Universidade Federal do Ceará (UFC)}
+\coorientadorcentro{Centro de Ciências (CC)}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,21 +165,12 @@
 % \membrodabancadoisies{Universidade Federal do Ceará - UFC}
 
 
-\membrodabancadois{Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx}
-\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos (FAFIDAM)}
-\membrodabancadoisies{Universidade do Membro da Banca Dois (SIGLA)}
-\membrodabancatres{Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx}
-\membrodabancatrescentro{Centro de Ciências e Tecnologia (CCT)}
-\membrodabancatresies{Universidade do Membro da Banca Três (SIGLA)}
-\membrodabancaquatro{Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia (CCT)}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro (SIGLA)}
-\membrodabancacinco{Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco (SIGLA)}
-\membrodabancaseis{Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis (SIGLA)}
+\membrodabancadois{Prof. Dr. Giovanni Cordeiro Barroso}
+\membrodabancadoiscentro{Centro de Tecnologia (CT)}
+\membrodabancadoisies{Universidade Federal do Ceará (UFC)}
+\membrodabancatres{Prof. Dr. Jarbas Aryel Nunes da Silveira}
+\membrodabancatrescentro{Centro de Tecnologia (CT)}
+\membrodabancatresies{Universidade Federal do Ceará (UFC)}
 
 \begin{document}	
 
@@ -200,7 +192,7 @@
 	%\imprimirlistadealgoritmos
 	%\imprimirlistadecodigosfonte
 	\imprimirlistadeabreviaturasesiglas
-	\imprimirlistadesimbolos{1-pre-textuais/lista-de-simbolos}   
+	%\imprimirlistadesimbolos{1-pre-textuais/lista-de-simbolos}   
 	\imprimirsumario
 	
 	\setcounter{table}{0}% Deixe este comando antes da primeira tabela.
@@ -209,10 +201,9 @@
 	\textual
 	\input{2-textuais/1-introducao}
 	\input{2-textuais/2-fundamentacao-teorica.tex}
-	\input{2-textuais/3-revisao-de-aplicacoes-da-ec2-f1.tex}
-	\input{2-textuais/4-metodologia}
-	\input{2-textuais/5-resultados}
-	\input{2-textuais/6-conclusao}
+	\input{2-textuais/3-metodologia}
+	\input{2-textuais/4-resultados}
+	\input{2-textuais/5-conclusao}
 	
 	%Elementos pós-textuais	
 	\bibliography{3-pos-textuais/referencias}
@@ -220,13 +211,13 @@
 	\imprimirapendices
 		% Adicione aqui os apendices do seu trabalho
 		\input{3-pos-textuais/apendices/apendice-a}
-		\input{3-pos-textuais/apendices/apendice-b}
-		\input{3-pos-textuais/apendices/apendice-c}
-		\input{3-pos-textuais/apendices/apendice-d}
+	%	\input{3-pos-textuais/apendices/apendice-b}
+	%	\input{3-pos-textuais/apendices/apendice-c}
+	%	\input{3-pos-textuais/apendices/apendice-d}
 	\imprimiranexos
 		% Adicione aqui os anexos do seu trabalho
 		\input{3-pos-textuais/anexos/anexo-a}
-		\input{3-pos-textuais/anexos/anexo-b}		
+	%	\input{3-pos-textuais/anexos/anexo-b}		
 	\imprimirindice
 
 \end{document}

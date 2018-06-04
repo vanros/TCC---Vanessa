@@ -170,7 +170,7 @@ Veja a seguir como inserir alguns elementos no seu texto.
 			Aplique Busca Local (Opcional)\;
 			Atualize o Feromônio\;
 		}	
-	}
+	}
 \end{algorithm}
 ```
 
